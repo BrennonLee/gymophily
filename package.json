@@ -1,0 +1,17 @@
+{
+  "name": "phil-wrkout",
+  "version": "1.0.0",
+  "private":true,
+  "description": "workout website",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "brennon <brle1617@colorado.edu>",
+  "license": "ISC"
+}
