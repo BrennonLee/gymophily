@@ -7,7 +7,7 @@ h1{
 }
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../images/background2.jpg') no-repeat center center fixed;
+    background: url('/images/background2.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -218,9 +218,10 @@ ul {
 }
 .flinks{
   float: left;
+  border: 1px solid #555;
 }
 .hlinks{
-  width: 100px;
+  width: 140px;
   display: block;
   padding: 8px;
   background-color: rgba(149,161,155,0.9);
