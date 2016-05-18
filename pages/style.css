@@ -1,0 +1,249 @@
+*{
+  box-sizing: border-box;
+}
+h1{
+  color: white;
+  text-align: center;
+}
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('../images/background2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+h2 {
+  text-align: center;
+  font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.intro{
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 2em;
+}
+a {
+  color: blue;
+}
+
+.daynum{
+  font-size: 25px;
+}
+
+table.day {
+    margin: 0 auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 600px;
+}
+
+table.day td, table.day th {
+    border: 2px solid black;
+    padding: 20px;
+    height: 40px;
+}
+
+table.day th{
+    width: 200px;
+}
+
+p{
+  font-size: 18px;
+  display: block;
+}
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+@media (min-width: 992px)
+.container {
+    width: 970px;
+}
+@media (min-width: 768px)
+.container {
+    /* width: 750px; */
+}
+@media screen and (min-width: 768px)
+.img-left {
+  float: left;
+  margin-right: 25px;
+}
+
+.img-left {
+    margin: 0 auto 0;
+    float: left;
+
+}
+.carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+     width: 70%;
+     margin: auto;
+ }
+
+.img-border {
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
+    vertical-align: middle;
+}
+.img-full {
+    min-width: 100%;
+}
+
+.container {
+    width: 970px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+div{
+  display: block;
+}
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: grey;
+    background: rgba(149,161,155,0.9);
+}
+.col-lg-12{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+hr{
+  box-sizing: content-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #eee;
+  max-width: 400px;
+  border-color: black;
+  }
+ul {
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contatiner{
+  width: 100%;
+}
+
+#left{
+  width: 33%;
+  float: left;
+  /*background: grey;
+  background: rgba(149,161,155,0.9);*/
+
+}
+#center{
+  width: 33%;
+  float: left;
+  /*padding-bottom: 255px;
+  background: grey;
+  background: rgba(149,161,155,0.9);*/
+}
+#right{
+  width: 33%;
+  float: left;
+  margin-top: 33px;
+  /*padding-top: 33px;
+  padding-bottom: 190px;
+  background: grey;
+  background: rgba(149,161,155,0.9);*/
+
+}
+
+#legstretch{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+#legstretchim{
+  float: left;
+  margin-left: 40px;
+  margin-top: 20px;
+  width: 85%;
+}
+
+#hamstringstretch{
+  float: center;
+  margin-top: 50px;
+}
+#hammy{
+  width: 80%;
+}
+#quad{
+  width: 35%;
+}
+#calf{
+  margin-top: 400px;
+}
+#calfim{
+  width: 70%;
+  margin-top: -20px
+}
+#hip{
+  margin-top: 35px;
+}
+#hipim{
+  margin-top: 75px;
+}
+#glute{
+  margin-top: 30px;
+}
+#gluteim{
+  margin-top: 40px;
+}
+.links{
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+.flinks{
+  float: left;
+}
+.hlinks{
+  width: 100px;
+  display: block;
+  padding: 8px;
+  background-color: rgba(149,161,155,0.9);
+  text-align: center;
+}
+.nav{
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+}
+li a{
+  display: block;
+  padding: 8px;
+  color: #000;
+  background-color: rgba(149,161,155,0.9);
+  text-decoration: none;
+}
+li a:hover {
+    background-color: green;
+    color: white;
+}
+footer{
+  text-align: center;
+}
