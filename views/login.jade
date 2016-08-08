@@ -19,8 +19,10 @@ html(lang='en')
         a.hlinks(href='/week1')  Weeks 1-4
       li.flinks
         a#CreateAccount.hlinks(href='/createAcc')  Create Account
-      li
-        a#Username #{username}
+      li.flinks
+        a#Username.hlinks #{username}
+      .row
+    .container
       .row
         .box
           #login.col-lg-12.text.center
@@ -30,6 +32,6 @@ html(lang='en')
               input#username(type='text', name='username')
               br
               |           Password:
-              input#password(type='text', name='password')
+              input#password(type='password', name='password')
               br
               input#loginSubmit(type='button', value='Login')

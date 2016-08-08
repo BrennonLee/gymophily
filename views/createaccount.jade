@@ -19,8 +19,8 @@ html(lang='en')
         a.hlinks(href='/week1')  Weeks 1-4
       li.flinks
         a#Login.hlinks(href='/login')  Login
-      li
-        a#Username #{username}
+      li.flinks
+        a#Username.hlinks #{username}
       .row
     .container
       .row
@@ -32,6 +32,6 @@ html(lang='en')
               input#username(type='text', name='username')
               br
               |           Password:
-              input#password(type='text', name='password')
+              input#password(type='password', name='password')
               br
               input(type='submit', value='Login', onclick='createUser()')

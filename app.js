@@ -47,8 +47,7 @@ mongodb.connect('mongodb://localhost/gymno', null, function(err, db){
     //     other: 'value'
     //   });
     // });
-
-
+    
 
     // Link routes for each webpage
     var index = require('./routes/index');
@@ -56,6 +55,7 @@ mongodb.connect('mongodb://localhost/gymno', null, function(err, db){
     var login = require('./routes/login');
     var stretch = require('./routes/stretch');
     var week1 = require('./routes/week1');
+    var yourwrk = require('./routes/yourwrk');
 
     //allow app to access route files
     app.use('/', index);
@@ -63,6 +63,7 @@ mongodb.connect('mongodb://localhost/gymno', null, function(err, db){
     app.use('/', login);
     app.use('/', stretch);
     app.use('/', week1);
+    app.use('/', yourwrk);
 
     var port = (process.env.PORT || 5000);
     app.listen((process.env.PORT || 5000), function() {

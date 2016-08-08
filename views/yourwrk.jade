@@ -6,7 +6,7 @@ html(lang='en')
     title Workout
     link(href='/css/style.css', type='text/css', rel='stylesheet')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
-  body
+  body(onload="getUserData()")
     script(type='text/javascript', src='/javascripts/global.js')
     script(type='text/javascript', src='/javascripts/userauth.js')
     hr
@@ -26,27 +26,14 @@ html(lang='en')
         .box
           .col-lg-12.text.center
             hr
-            h2 Notes on Weeks 1-4
+            h2 Welcome to your own personalized workout!!
             hr
             p
-              | Welcome to the first few weeks! Below is a detailed workout list of what everyday should look like for your workout. Every workout should take around 45 minutes to complete
-              | (it will vary on rest time between sets. But a good starting point is around 1 minute). Each day will begin with some cardio. The point of this is to get your body lose and
-              | to get a good sweat going so you will have less chance of injury when lifting weights later. As you can see, I made a link to some example stretches that you can refer to
-              | to help with avoiding injuries. Next, I will just do a quick break down of what each day will cover.
-            p
-              | Before the details, I should highlight the core groups that every lifter should know. 1) CHEST 2) LEGS 3) BACK. These are the core lifts that you will want to know by heart.
-              | They are core lifts because they use multiple muscles in order to perform the associated lift. Day 1 focuses on upper body by starting out with a core chest exercise. Like I said before,
-              | every workout is geared to be a full body workout but each is focused on a particular core lift for that day. Day 3 will focus on core leg exercises. And day 5 focuses on back. Now for
-              | rest days, you have nothing required of you. But if you are feeling sore from a previous workout, the worst thing you can do is sit around all day. I would strongly encourage on going for a
-              | jog outside or maybe a swim. Even going over and sitting in a hottub will have your body feeling much more relaxed. Most importantly, you should
-              strong  stretch
-              |  on your days off!!
-              |             You will thank yourself for doing it ahead of time rather than later. After building a fundamental base to your body, the next workouts will be less focused on full body workouts and more in specialization of one of the core lifts. But that is in
-              |              the future. Let us focus on the now!!!
+              | Here you will find your own personalized workout that will load all the current weight you have been using for your exercises.
       .container
         .row
           .box
-            table.day
+            table.day#results
               tbody
                 tr
                   th.daynum(colspan='3') Day 1

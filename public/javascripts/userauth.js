@@ -5,4 +5,7 @@ $(document).ready(function() {
     $('#Login').html('Logout');
     $('#Login').on('click', function() {window.location.href = "/login"});
   }
+  else{
+    $('#Username').hide();
+  }
 });
