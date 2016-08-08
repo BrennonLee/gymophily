@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Workout
+    link(href='/css/style.css', type='text/css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+  body
+    script(type='text/javascript', src='/javascripts/global.js')
+    script(type='text/javascript', src='/javascripts/userauth.js')
+    hr
+    h1  Gymno-Phily
+    hr
+    ul.nav
+      li.flinks
+        a.hlinks(href='/')  Home
+      li.flinks
+        a.hlinks(href='/week1')  Weeks 1-4
+      li.flinks
+        a#Login.hlinks(href='/login')  Login
+      li
+        a#Username #{username}
+      .row
+    .container
+      .row
+        .box
+          .col-lg-12.text.center
+            p CREATE ACCOUNT
+            form(action='')
+              | Username:
+              input#username(type='text', name='username')
+              br
+              |           Password:
+              input#password(type='text', name='password')
+              br
+              input(type='submit', value='Login', onclick='createUser()')

@@ -1,16 +1,25 @@
 {
   "name": "phil-wrkout",
   "version": "1.0.0",
-  "private":true,
+  "private": true,
   "description": "workout website",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "~1.13.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "~0.7.1",
+    "express": "^4.13.4",
+    "express-session": "^1.14.0",
+    "jade": "^1.11.0",
+    "mongodb": "^2.2.5",
+    "mongoose": "^4.4.19"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node ./app.js"
   },
   "author": "brennon <brle1617@colorado.edu>",
   "license": "ISC"
