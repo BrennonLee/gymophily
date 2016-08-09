@@ -9,7 +9,9 @@ var router = require('express').Router();
 //Retrieve
 var mongodb = require('mongodb');
 var app = express();
-mongodb.connect('mongodb://localhost/gymno', null, function(err, db){
+var live_url = " mongodb://<dbuser>:<dbpassword>@ds147985.mlab.com:47985/gymno";
+//var url = "mongodb://localhost/gymno"
+mongodb.connect(live_url, null, function(err, db){
   if (err){
     console.error("failed to connect to db: ", err);
   }else
@@ -47,7 +49,7 @@ mongodb.connect('mongodb://localhost/gymno', null, function(err, db){
     //     other: 'value'
     //   });
     // });
-    
+
 
     // Link routes for each webpage
     var index = require('./routes/index');
