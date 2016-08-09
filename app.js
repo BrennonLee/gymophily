@@ -9,9 +9,9 @@ var router = require('express').Router();
 //Retrieve
 var mongodb = require('mongodb');
 var app = express();
-var live_url = "mongodb://Brennon:abc@ds147985.mlab.com:47985/gymno";
+var live_url = "mongodb://Brennon:abc@ds147985.mlab.com:47985/gymno"; //using mlab
 var url = "mongodb://localhost/gymno"
-mongodb.connect(live_url, null, function(err, db){
+mongodb.connect(url, null, function(err, db){
   if (err){
     console.error("failed to connect to db: ", err);
   }else

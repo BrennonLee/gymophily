@@ -17,8 +17,12 @@ router.post('/getData', function (req, res){
 
 // GET home page.
 router.get('/yourwrk', function(req, res, next) {
+  if (req.session.username == 'Linda'){
+    res.render('linda', {title: 'gymno'})
+  }else{
   // Render the homepage and send a json object with title corresponding to 'home'
   res.render('yourwrk', {title: 'gymno'});
+  }
 });
 
 module.exports = router;
