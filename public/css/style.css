@@ -67,9 +67,6 @@ p{
   body {
       width: auto;
   }
-.container {
-    width: 970px;
-}
 }
 @media (min-width: 768px){
   body {
@@ -118,7 +115,7 @@ p{
 }
 
 .container {
-    width: auto;
+    width: auto/2;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -152,14 +149,14 @@ hr{
   max-width: 400px;
   border-color: black;
   }
-ul {
+div.box ul {
   display: table;
   margin: 0 auto;
   text-align: left;
 }
 
 #contatiner{
-  width: 100%;
+  width: 5%;
 }
 
 #left{
@@ -237,18 +234,18 @@ ul {
   /*float: left;*/
   /*border: 1px solid #555;*/
 }
-.hlinks{
+/*.hlinks{
   width: 142px;
   height: 64px;
   display: block;
   padding: 8px;
   background-color: rgba(149,161,155,0.9);
   text-align: center;
-}
+}*/
 .nav{
   list-style-type: none;
   padding: 0;
-  position: relative;
+  /*position: relative;*/
   margin: auto;
   margin-bottom: 20px;
 }
@@ -259,7 +256,10 @@ ul {
 /* Remove margins and padding from the list, and add a black background color */
 ul.nav {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: rgba(149,161,155,0.9);
 }
 
 /* Float the list items side by side */
@@ -276,6 +276,10 @@ ul.nav li a {
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.nav li.icon {display: none;}
+
+/*#myTopnav{
+  background-color: rgba(149,161,155,0.9);
+}*/
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {

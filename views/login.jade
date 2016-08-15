@@ -11,11 +11,11 @@ html(lang='en')
     script(type='text/javascript', src='/javascripts/userauth.js')
     ul#myTopnav.nav.flinks
       li
-        a.hlinks(href='/')  Home
+        a.hlinks(href='/' style='padding-top: 20px')  Home
       li
-        a#Login.hlinks(href='/week1')  Weeks 1-4
+        a#Login.hlinks(href='/week1' style='padding-top: 20px')  Weeks 1-4
       li
-        a#CreateAccount.hlinks(href='/createAcc')  Create Account
+        a#CreateAccount.hlinks(href='/createAcc' style='padding-top: 20px')  Create Account
       li
         a#Username.hlinks(href='/yourwrk' style='padding-top: 20px') #{username}
       li.icon
@@ -31,10 +31,10 @@ html(lang='en')
           #login.col-lg-12.text.center
             p LOGIN
             form
-              | Username:
+              | Username <span style="color: red">*</span>:
               input#username(type='text', name='username')
               br
-              |           Password:
+              |           Password <span style="color: red">*</span>:
               input#password(type='password', name='password')
               br
               input#loginSubmit(type='button', value='Login')
