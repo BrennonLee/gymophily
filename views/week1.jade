@@ -5,24 +5,25 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Workout
     link(href='/css/style.css', type='text/css', rel='stylesheet')
-    link(rel='stylesheet', href='http://domain.tld/screen.css', type='text/css', media='Screen')
-    link(rel='stylesheet', href='http://domain.tld/mobile.css', type='text/css', media='handheld')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
   body
     script(type='text/javascript', src='/javascripts/global.js')
     script(type='text/javascript', src='/javascripts/userauth.js')
-    hr
-    h1  Weeks 1-4
-    hr
-    ul.nav
-      li.flinks
-        a.hlinks(href='/')  Home
-      li.flinks
-        a#Login.hlinks(href='/login')  Login
-      li.flinks
+    ul#myTopnav.nav.flinks
+      li
+        a.hlinks(href='/' style='padding-top: 20px')  Home
+      li
+        a#Login.hlinks(href='/login' style='padding-top: 20px')  Login
+      li
         a#CreateAccount.hlinks(href='/createAcc')  Create Account
-      li.flinks
-        a#Username.hlinks(href='/yourwrk') #{username}
+      li
+        a#Username.hlinks(href='/yourwrk' style='padding-top: 20px') #{username}
+      li.icon
+        a(href='javascript:void(0);', onclick='myFunction()') ☰
+    div
+      hr
+      h1  Gymno-Phily
+        hr
     .container
       .row
         .box
@@ -46,7 +47,6 @@ html(lang='en')
               |             You will thank yourself for doing it ahead of time rather than later. After building a fundamental base to your body, the next workouts will be less focused on full body workouts and more in specialization of one of the core lifts. But that is in
               |              the future. Let us focus on the now!!!
       .container
-        .row
           .box
             table.day
               tbody
@@ -87,7 +87,6 @@ html(lang='en')
                   td  Sets: 1 for 30-45 seconds
                   td
                     a(href='https://www.youtube.com/watch?v=pSHjTRCQxIw', target='_blank')  Example
-        .row
           .box
             table.day
               tbody
@@ -95,7 +94,6 @@ html(lang='en')
                   th.daynum(colspan='3') Day 2
                 tr
                   th.daynum(colspan='3') REST DAY!
-        .row
           .box
             table.day
               tbody
@@ -136,7 +134,6 @@ html(lang='en')
                   td Sets: 1 Reps: 30 per side
                   td
                     a(href='http://www.bodybuilding.com/exercises/detail/view/name/air-bike', target='_blank') Example
-        .row
           .box
             table.day
               tbody
@@ -144,7 +141,6 @@ html(lang='en')
                   th.daynum(colspan='3') Day 4
                 tr
                   th.daynum(colspan='3') REST DAY!
-        .row
           .box
             table.day
               tbody
@@ -182,7 +178,6 @@ html(lang='en')
                   td Sets: 1 for 30-45 seconds
                   td
                     a(href='https://www.youtube.com/watch?v=pSHjTRCQxIw', target='_blank') Example
-        .row
           .box
             table.day
               tbody
@@ -190,7 +185,6 @@ html(lang='en')
                   th.daynum(colspan='3') Day 6
                 tr
                   th.daynum(colspan='3') REST DAY!
-        .row
           .box
             table.day
               tbody

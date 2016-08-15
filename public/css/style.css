@@ -37,7 +37,8 @@ table.day {
     margin-top: 20px;
     border-collapse: collapse;
     border: 2px solid black;
-    width: 600px;
+    width: auto;
+    background: rgba(149,161,155,0.9);
 }
 
 table.day td, table.day th {
@@ -54,63 +55,38 @@ p{
   font-size: 18px;
   display: block;
 }
-@media (min-width: 1200px)
+@media (min-width: 1200px){
+  body {
+      width: auto;
+  }
 .container {
     width: 1170px;
 }
-@media (min-width: 992px)
+}
+@media (min-width: 992px){}
+  body {
+      width: auto;
+  }
 .container {
     width: 970px;
 }
-@media (min-width: 768px)
-.container {
-    /* width: 750px; */
 }
-@media screen and (min-width: 768px)
+@media (min-width: 768px){
+  body {
+      width: auto;
+  }
+.container {
+    width: 750px;
+}
+}
+@media screen and (min-width: 768px){
+  body {
+      width: auto;
+  }
 .img-left {
   float: left;
   margin-right: 25px;
 }
-/* mobile styles */
-@media handheld {
-
-	html, body {
-		font: 12px/15px sans-serif;
-		background: #fff;
-		padding: 3px;
-		color: #000;
-		margin: 0;
-		}
-	#sidebar, #footer {
-		display: none;
-		}
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: normal;
-		}
-	#content img {
-		max-width: 250px;
-		}
-	.center {
-		width: 100% !important;
-		text-align: center;
-		}
-	a:link, a:visited {
-		text-decoration: underline;
-		color: #0000CC;
-		}
-	a:hover, a:active {
-		text-decoration: underline;
-		color: #660066;
-		}
-
-}
-/* iPhone-specific styles */
-@media only screen and (max-device-width: 480px) {
-
-	html {
-		-webkit-text-size-adjust: none;
-		}
-
 }
 
 .img-left {
@@ -142,7 +118,7 @@ p{
 }
 
 .container {
-    width: 970px;
+    width: auto;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -151,6 +127,7 @@ p{
 .row {
     margin-right: -15px;
     margin-left: -15px;
+    background: rgba(149,161,155,0.9);
 }
 div{
   display: block;
@@ -158,8 +135,7 @@ div{
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;
-    background: grey;
-    background: rgba(149,161,155,0.9);
+
 }
 .col-lg-12{
   position: relative;
@@ -258,11 +234,12 @@ ul {
   overflow: hidden;
 }
 .flinks{
-  float: left;
-  border: 1px solid #555;
+  /*float: left;*/
+  /*border: 1px solid #555;*/
 }
 .hlinks{
-  width: 140px;
+  width: 142px;
+  height: 64px;
   display: block;
   padding: 8px;
   background-color: rgba(149,161,155,0.9);
@@ -275,6 +252,83 @@ ul {
   margin: auto;
   margin-bottom: 20px;
 }
+
+
+
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.nav {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+/* Float the list items side by side */
+ul.nav li {float: left;}
+
+/* Style the links inside the list items */
+ul.nav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.nav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  body {
+      width: auto;
+  }
+  ul.nav li:not(:first-child) {display: none;}
+  ul.nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  body {
+      width: auto;
+  }
+  ul.nav.responsive {position: relative;}
+  ul.nav.responsive li.icon {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+  }
+  ul.nav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:320px) {
+body {
+    width: auto;
+}
+/* some other style */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 li a{
   display: block;
   padding: 8px;

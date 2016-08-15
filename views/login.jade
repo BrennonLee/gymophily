@@ -5,24 +5,25 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Workout
     link(href='/css/style.css', type='text/css', rel='stylesheet')
-    link(rel='stylesheet', href='http://domain.tld/screen.css', type='text/css', media='Screen')
-    link(rel='stylesheet', href='http://domain.tld/mobile.css', type='text/css', media='handheld')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
   body
     script(type='text/javascript', src='/javascripts/global.js')
     script(type='text/javascript', src='/javascripts/userauth.js')
-    hr
-    h1  Gymno-Phily
-    hr
-    ul.nav
-      li.flinks
+    ul#myTopnav.nav.flinks
+      li
         a.hlinks(href='/')  Home
-      li.flinks
-        a.hlinks(href='/week1')  Weeks 1-4
-      li.flinks
+      li
+        a#Login.hlinks(href='/week1')  Weeks 1-4
+      li
         a#CreateAccount.hlinks(href='/createAcc')  Create Account
-      li.flinks
-        a#Username.hlinks #{username}
+      li
+        a#Username.hlinks(href='/yourwrk' style='padding-top: 20px') #{username}
+      li.icon
+        a(href='javascript:void(0);', onclick='myFunction()') ☰
+    div
+      hr
+      h1  Gymno-Phily
+        hr
       .row
     .container
       .row
