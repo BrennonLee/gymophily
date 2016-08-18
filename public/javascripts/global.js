@@ -27,13 +27,32 @@ function getUserData(event){
     datatype: 'json',
     success: function(response){
       if (response.success == true){
+
+
         //get data and display in tables
         for (var i in response.docdata){
-          console.log(response.docdata[i].dumbbell_bench_press);
-          console.log(response.docdata[i].dumbbell_lunges);
-          var col = $("<td />");
-          $("#result").append(col);
-          col.append($("<tr>" + response.docdata[i].dumbbell_bench_press + "</tr>"));
+          var num = 0;
+          $("#results tr").each(function(){
+            var count = $(this);
+            if (num == 0){
+              count.append("<td> Weight/Time </td>");
+            }else if(num == 1){
+              count.append("<td> 15 Min</td>");
+            }else if(num == 2){
+              count.append("<td>" + response.docdata[i].dumbbell_bench_press + "</td>");
+            }else if(num == 3){
+              count.append("<td>" + response.docdata[i].dumbbell_lunges + "</td>");
+            }else if(num == 4){
+              count.append("<td>" + response.docdata[i].wide_grip_lateral_pulldowns + "</td>" )
+            }else if(num == 5){
+              count.append("<td>" + response.docdata[i].bicep_curls_with_dumbbells + "</td>" )
+            }else if(num == 6){
+              count.append("<td>" + response.docdata[i].crunches + "</td>" )
+            }else if(num == 7){
+              count.append("<td>" + response.docdata[i].plank + "</td>" )
+            }
+          num ++;
+          })
         }
       }
       else{
