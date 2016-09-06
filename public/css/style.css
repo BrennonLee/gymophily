@@ -116,8 +116,8 @@ p{
 
 .container {
     width: auto/2;
-    padding-right: 15px;
-    padding-left: 15px;
+    /*padding-right: 15px;
+    padding-left: 15px;*/
     margin-right: auto;
     margin-left: auto;
 }
@@ -125,13 +125,18 @@ p{
     margin-right: -15px;
     margin-left: -15px;
     background: rgba(149,161,155,0.9);
+    /*padding-top: 1%*/
+}
+div.row{
+
 }
 div{
   display: block;
 }
 .box {
     margin-bottom: 20px;
-    padding: 30px 15px;
+    width: auto;
+    /*padding: 30px 15px;*/
 
 }
 .col-lg-12{

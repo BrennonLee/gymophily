@@ -11,7 +11,7 @@ var mongodb = require('mongodb');
 var app = express();
 var live_url = "mongodb://Brennon:abc@ds147985.mlab.com:47985/gymno"; //using mlab
 var url = "mongodb://localhost/gymno"
-mongodb.connect(live_url, null, function(err, db){
+mongodb.connect(url, null, function(err, db){
   if (err){
     console.error("failed to connect to db: ", err);
   }else
@@ -102,35 +102,6 @@ mongodb.connect(live_url, null, function(err, db){
 //     error: {}
 //   });
 // });
-
-
-
-
-//search database
-
-  // var MongoClient = require('mongodb').MongoClient;
-  // var assert = require('assert');
-  // var ObjectId = require('mongodb').ObjectID;
-  // var url = 'mongodb://localhost/gymno';
-  //
-  // var findUser = function(db, callback){
-  //   var cursor = db.collection('users').find();
-  //   cursor.each(function(err,doc){
-  //     assert.equal(err,null);
-  //     if (doc != null){
-  //       console.log(doc);
-  //     } else{
-  //       callback();
-  //     }
-  //   });
-  // };
-  //
-  // MongoClient.connect(url, function(err, db) {
-  //   assert.equal(null, err);
-  //   findUser(db, function() {
-  //       db.close();
-  //   });
-  // });
 
 
 //create Schema
