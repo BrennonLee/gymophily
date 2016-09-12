@@ -3,6 +3,10 @@ $(document).ready(function() {
     $('#loginSubmit').on('click', userLogin);
 });
 
+//get hashing file
+$.getScript("/javascripts/md5.js", function(){
+});
+
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -35,20 +39,20 @@ function getUserData(event){
           $("#results tr").each(function(){
             var count = $(this);
             if (num == 0){
-              count.append("<td> Weight/Time </td>");
-            }else if(num == 1){
-              count.append("<td> 15 Min</td>");
+              //count.find('td').last().html("Weight/Time");
             }else if(num == 2){
-              count.append("<td>" + response.docdata[i].dumbbell_bench_press + "</td>");
+              count.append("<td> 15 Min </td>");
             }else if(num == 3){
-              count.append("<td>" + response.docdata[i].dumbbell_lunges + "</td>");
+              count.append("<td>" + response.docdata[i].dumbbell_bench_press + "</td>");
             }else if(num == 4){
-              count.append("<td>" + response.docdata[i].wide_grip_lateral_pulldowns + "</td>" )
+              count.append("<td>" + response.docdata[i].dumbbell_lunges + "</td>");
             }else if(num == 5){
-              count.append("<td>" + response.docdata[i].bicep_curls_with_dumbbells + "</td>" )
+              count.append("<td>" + response.docdata[i].wide_grip_lateral_pulldowns + "</td>" )
             }else if(num == 6){
-              count.append("<td>" + response.docdata[i].crunches + "</td>" )
+              count.append("<td>" + response.docdata[i].bicep_curls_with_dumbbells + "</td>" )
             }else if(num == 7){
+              count.append("<td>" + response.docdata[i].crunches + "</td>" )
+            }else if(num == 8){
               count.append("<td>" + response.docdata[i].plank + "</td>" )
             }
           num ++;
@@ -79,7 +83,8 @@ function userLogin(event){
     // Create a user json object with username and password given by user
     var user = {
 			'username': $('#login form input#username').val(),
-			'password': $('#login form input#password').val()
+			'password': calcMD5($('#login form input#password').val())
+      //hash password
     }
     //Send a post request to the /login route using ajax
     $.ajax({

@@ -25,7 +25,7 @@ html(lang='en')
       h1  Gymno-Phily
         hr
     .container
-      .row
+      .row#intro
         .box
           .col-lg-12.text.center
             hr
@@ -34,11 +34,16 @@ html(lang='en')
             p
               | Here you will find your own personalized workout that will load all the current weight you have been using for your exercises.
       .container
-          .box
+          .box#result
             table.day#results
               tbody
                 tr
-                  th.daynum(colspan='3') Day 1
+                  th.daynum(colspan='4') Day 1
+                tr
+                  th Name
+                  th Description
+                  th Links
+                  th Weight/Time
                 tr
                   th  Warm-up: Jog on treadmill
                   td  For half a mile. Goal is between 6 and 7 minutes. Then stretch for 5 minutes.
